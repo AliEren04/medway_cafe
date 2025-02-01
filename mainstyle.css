@@ -1,0 +1,1031 @@
+/* Define CSS Variables */
+:root {
+  --main-bg-color: #000000;
+  --white-bg-color: #ffffff;
+  --red-text-color: #DB0D0D;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --max-width: 1678px;
+  --default-font-size: 36px;
+  --tablet-font-size: 24px;
+  --mobile-font-size: 14px;
+  --desktop-header-font-size: 32px;
+  --hero-text-font-size: 72px;
+  --main-header-font-size: 36px;
+  --hero-section-height: 342px;
+  --features-height: 90px;
+  --features-mobile-width: 90%;
+  --features-tablet-width: 85%;
+  --features-desktop-width: 70%;
+  --padding: 20px;
+  --mobile-padding: 15px;
+  --margin: 10px;
+  --nav-item-desktop-font-size: 26px;
+  --nav-item-tablet-font-size: 16px;
+  --nav-item-mobile-font-size: 10px;
+  --hero-text-tablet-font-size: 48px;
+  --hero-text-mobile-font-size: 20px;
+  --flow-icon-size: 182px;
+  --flow-icon-mobile-size: 72px;
+  --flow-text-font-size: 72px;
+  --flow-text-mobile-font-size: 22px;
+  --flow-text-mobile-font-size-small: 16px;
+  --main-header-margin-left: 28px;
+  --hero-section-margin-top: 128px;
+  --hero-section-margin-top-small: 172px;
+  --mobile-hero-text-margin-top: 72px;
+  --flow-mobile-margin-top: 16px;
+  --flow-text-mobile-container-margin-top: 48px;
+  --flow-text-mobile-container-margin-top-small: 64px;
+  --features-margin-top: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--main-bg-color);
+  padding-bottom: 60px;
+  font-size: 1rem; /* Base font size for scaling */
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Bhavuka";
+  src: url("assets/fonts/Bhavuka-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Nav Container */
+.nav-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: var(--white-bg-color);
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Cherry Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ad3030;
+  box-shadow: var(--box-shadow);
+}
+
+/* Logo sizing */
+.logo {
+  max-width: 80px;
+  height: auto;
+}
+
+/* By Default Navigation items on desktop */
+.nav-item-desktop {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.nav-item-desktop:hover {
+  color: #000000;
+}
+
+.nav-item-mobile {
+  display: none;
+}
+
+.hamburger-container {
+  display: none;
+}
+
+.main-header {
+  font-family: "Bhavuka", sans-serif;
+  font-size: var(--main-header-font-size);
+  color: #b34444;
+}
+
+.main-header:hover {
+  color: #000000;
+}
+
+/* Hero Section Desktop Setup */
+.hero-section {
+  width: 100vw;
+  height: var(--hero-section-height);
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  font-family: "Carattere", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--hero-text-font-size);
+  color: #f3f3f3;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flow {
+  display: flex;
+  margin: 12px;
+}
+
+.flow-icon {
+  width: var(--flow-icon-size);
+  height: var(--flow-icon-size);
+}
+
+.flow-text {
+  font-family: "Codystar", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: var(--flow-text-font-size);
+  color: #ffffff;
+  margin-left: 24px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white-bg-color); /* White background */
+  padding: var(--padding);
+  margin: var(--margin) auto; /* Center the container with space on the sides */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: var(--features-desktop-width); /* Set width to 70% of the available space */
+  height: var(--features-height); /* Adjusted height */
+  max-width: var(--max-width); /* Maximum width for desktop frame */
+  margin-bottom: var(--margin);
+}
+
+.feature-left, .feature-center, .feature-right {
+  font-family: 'Aldrich', sans-serif;
+  flex: 1; /* Flex grow for equal spacing */
+  text-align: center; /* Center text by default */
+  color: var(--red-text-color); /* Red text color */
+  font-size: var(--default-font-size); /* Default font size for desktop */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.feature-left {
+  text-align: left; /* Align left */
+  margin-left: 10px; /* Add margin for aesthetics */
+}
+
+.feature-center {
+  text-align: center; /* Center text */
+  margin: 0 10px; /* Add horizontal margin for aesthetics */
+}
+
+.feature-right {
+  text-align: right; /* Align right */
+  margin-right: 10px; /* Add margin for aesthetics */
+
+}
+
+/* Navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff; /* Button color */
+  width: 40px; /* Adjust button width */
+  height: 40px; /* Adjust button height */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  position: absolute; /* Position them absolute within swiper */
+  z-index: 10; /* Ensure buttons are on top of the images */
+  border-radius: 10px; /* Apply radius for larger screens */
+}
+
+.slide-text {
+  font-family: 'Aldrich', sans-serif; /* Use Aldrich font */
+  font-size: 24px; /* Default font size for desktop */
+  color: #ffffff; /* Ensure text color is white for visibility */
+  position: absolute; /* Position text over the image */
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  text-align: center; /* Center text horizontally */
+  z-index: 5; /* Make sure text stays above the image */
+  white-space: nowrap; /* Prevent long words from wrapping */
+}
+
+@media only screen and (max-width: 768px) {
+  .slide-text {
+    font-size: 22px; /* Adjust font size for tablet */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slide-text {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 400px) {
+  .slide-text {
+    font-size: 20px; /* Keep font size for small mobile */
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 992px) {
+  .nav-item-desktop {
+    font-size: var(--nav-item-desktop-font-size);
+  }
+
+  .mobile-hero-text {
+    display: none;
+  }
+
+  .flow-mobile {
+    display: none;
+  }
+
+  .flow-text-mobile {
+    display: none;
+  }
+
+  .flow-text-mobile-container {
+    display: none;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  .main-header {
+    font-size: 28;
+  }
+
+  .nav-item-desktop {
+    font-size: var(--nav-item-tablet-font-size);
+  }
+
+  .hero-text {
+    font-size: var(--hero-text-tablet-font-size);
+  }
+
+  .features {
+    width: var(--features-tablet-width);
+    height: auto;
+    padding: var(--padding);
+  }
+  .feature-left, .feature-center, .feature-right {
+    font-size: var(--tablet-font-size);
+  }
+
+  .swiper-slide {
+    height: 250px; /* Adjust height for tablet screens */
+  }
+  .slide-text {
+    font-size: 26px; /* Adjust text size for tablet */
+    z-index: 15; /* Ensure it's above the image */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .features {
+    width: var(--features-mobile-width);
+    height: auto;
+    padding: var(--mobile-padding);
+    margin: var(--margin) auto;
+  }
+  .feature-left, .feature-center, .feature-right {
+    font-size: var(--mobile-font-size);
+  }
+  .swiper {
+    height: 200px;
+  }
+  .slide-text {
+    font-size: 24px; /* Adjust text size for mobile */
+    z-index: 15; /* Ensure it's above the image */
+  }
+}
+
+/* Mobile Breakpoint Responsive */
+@media only screen and (max-width: 600px) {
+  .nav-item-desktop {
+    display: none;
+  }
+
+  /* Hamburger men icon icon alignment in flex for mobile */
+  .nav-item-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  /* Overlay from right for mobile*/
+  .overlay-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: auto;
+    right: -100%;
+    width: 184px;
+    height: 100vh;
+    background-color: var(--white-bg-color);
+    z-index: 20;
+    flex-direction: column;
+    color: #ad3030;
+    opacity: 0;
+    transition: right 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  /* When the menu is active (right to 0) */
+  .overlay-mobile.overlay-mobile-active {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: right 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  /* Hamburger icon alignment inside overlay */
+  .mobile-menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 8px;
+    position: fixed;
+    visibility: visible;
+    top: 12px;
+    right: 0;
+    bottom: auto;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* Mobile item alignment for overlay in mobile*/
+  .mobile-item {
+    text-decoration: none !important;
+    color: inherit;
+    font-family: "Cherry Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    white-space: nowrap;
+    visibility: visible;
+  }
+
+  .mobile-item:hover {
+    color: #000000;
+  }
+
+  .x-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .main-header {
+    margin-left: var(--main-header-margin-left);
+  }
+
+  .hero-text {
+    display: none;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+  }
+
+  .hero-section {
+    position: relative;
+    margin-top: var(--hero-section-margin-top);
+    height: 240px;
+  }
+
+  .mobile-hero-text {
+    font-family: "Carattere", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--hero-text-mobile-font-size);
+    color: #f3f3f3;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+  }
+
+  .flow {
+    display: none;
+  }
+
+  .flow-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--flow-mobile-margin-top);
+  }
+
+  .flow-text-mobile-container {
+    display: flex;
+    margin-top: var(--flow-text-mobile-container-margin-top);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flow-text-mobile {
+    font-family: "Codystar", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: var(--flow-text-mobile-font-size);
+    color: #ffffff;
+  }
+
+  .features {
+    width: var(--features-mobile-width);
+    height: auto;
+    padding: var(--mobile-padding);
+    margin: var(--margin) auto;
+  }
+  .feature-left, .feature-center, .feature-right {
+    font-size: var(--mobile-font-size);
+  }
+
+  .swiper-slide {
+    position: relative;
+  }
+
+  .slide-text {
+    font-size: 22px; /* Adjust text size for mobile */
+    z-index: 15; /* Ensure it's above the image */
+  }
+}
+
+/* Extra Breakpoints for Full Responsiveness */
+@media only screen and (min-width: 601px) and (max-width: 899px) {
+  .main-header {
+    font-size: 12;
+  }
+
+  .nav-item-desktop {
+    font-size: var(--nav-item-mobile-font-size);
+  }
+
+  .hero-text {
+    font-size: 36px;
+  }
+
+  .hero-section {
+    margin-top: -24px;
+  }
+
+  .flow {
+    display: none;
+  }
+
+  .flow-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  .flow-text-mobile-container {
+    display: flex;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flow-text-mobile {
+    font-family: "Codystar", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .features {
+    width: var(--features-tablet-width);
+    height: auto;
+    padding: var(--padding);
+  }
+  .feature-left, .feature-center, .feature-right {
+    font-size: var(--tablet-font-size);
+  }
+
+  .slide-text {
+    font-size: 24px; /* Adjust text size for tablet */
+  }
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 337px) {
+  .hero-section {
+    position: relative;
+    margin-top: var(--hero-section-margin-top-small);
+    height: 240px;
+  }
+
+  .mobile-hero-text {
+    font-family: "Carattere", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--hero-text-mobile-font-size);
+    color: #f3f3f3;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    margin-top: var(--mobile-hero-text-margin-top);
+  }
+
+  .flow {
+    display: none;
+  }
+
+  .flow-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--flow-mobile-margin-top);
+  }
+
+  .flow-text-mobile-container {
+    display: flex;
+    margin-top: var(--flow-text-mobile-container-margin-top-small);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flow-text-mobile {
+    font-family: "Codystar", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: var(--flow-text-mobile-font-size-small);
+    color: #ffffff;
+  }
+
+  .swiper-slide {
+    height: 200px; /* Adjust height for mobile screens */
+  }
+
+  .slide-image {
+    object-fit: contain; /* Ensure image fits inside the slide */
+  }
+
+  .swiper {
+    height: 200px;
+  }
+  .slide-text {
+    font-size: 22px; /* Adjust text size for mobile */
+    z-index: 15; /* Ensure it's above the image */
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero-section {
+    margin-top: -20px;
+  }
+
+  .flow-mobile {
+    display: none;
+  }
+
+  .flow-text-mobile {
+    display: none;
+  }
+
+  .flow-text-mobile-container {
+    display: none;
+  }
+
+  .flow {
+    display: flex;
+    margin: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flow-icon {
+    width: var(--flow-icon-mobile-size);
+    height: var(--flow-icon-mobile-size);
+    margin-top: 32px;
+    margin-left: 8px;
+  }
+
+  .flow-text {
+    font-family: "Codystar", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 32px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+  }
+}
+
+@media only screen and (min-width: 899px) and (max-width: 900px) {
+  .flow-text-mobile-container {
+    display: none;
+  }
+  .flow-mobile {
+    display: none;
+  }
+
+  .flow-text-mobile {
+    display: none;
+  }
+
+  .flow {
+    display: flex;
+    margin: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flow-icon {
+    width: var(--flow-icon-mobile-size);
+    height: var(--flow-icon-mobile-size);
+    margin-top: 32px;
+    margin-left: 8px;
+  }
+
+  .flow-text {
+    font-family: "Codystar", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 32px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1399px) {
+    .flow-text-mobile-container {
+      display: none;
+    }
+    .flow-mobile {
+      display: none;
+    }
+  
+    .flow-text-mobile {
+      display: none;
+    }
+  
+    .flow {
+      display: flex;
+      margin: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .flow-icon {
+      width: var(--flow-icon-mobile-size);
+      height: var(--flow-icon-mobile-size);
+      margin-top: 32px;
+      margin-left: 8px;
+    }
+  
+    .flow-text {
+      font-family: "Codystar", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 32px;
+      color: #ffffff;
+      margin-top: 32px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #fff; /* Button color */
+      width: 40px; /* Adjust button width */
+      height: 40px; /* Adjust button height */
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Center vertically */
+      position: absolute; /* Position them absolute within swiper */
+      z-index: 10; /* Ensure buttons are on top of the images */
+      border-radius: 10px; /* Apply radius for larger screens */
+    }
+}
+  
+  @media (min-width: 900px) {
+    .features {
+      height: 64px;
+      padding: 25px;
+      margin-top: var(--features-margin-top);
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .mobile-hero-text,
+    .flow-mobile,
+    .flow-text-mobile,
+    .flow-text-mobile-container {
+      display: none;
+    }
+}
+
+@media (min-width: 1201px) {
+  .swiper-slide {
+    height: 400px; /* Adjust height for very large screens */
+  }
+}
+
+/* Tablet Styles (769px to 991px) */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .swiper {
+    display: flex; /* Ensure it's using flexbox layout */
+    justify-content: center; /* Center swiper content */
+    align-items: center; /* Vertically align the content */
+    margin-left: 0; /* Remove auto margin */
+    margin-right: 0; /* Remove auto margin */
+    padding: 0; /* Reset padding */
+    z-index: 1; /* Ensure correct stacking order */
+    position: relative; /* Keep position relative for buttons */
+    overflow: hidden; /* Hide overflowed content */
+  }
+
+  .swiper-slide {
+    display: flex; /* Ensure flex layout inside slide */
+    justify-content: center; /* Center content inside slide */
+    align-items: center; /* Center content vertically */
+    height: 100%; /* Ensure slide takes full height */
+    max-height: 300px; /* Limit height to prevent oversized slides */
+  }
+
+  .slide-image {
+    width: 100%; /* Ensure the image takes full width */
+    height: 100%; /* Make sure the image takes full height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    max-height: 300px; /* Prevent image from getting too large */
+  }
+
+  .hero-text {
+    font-size: var(--hero-text-tablet-font-size); /* Adjust hero text for tablet */
+  }
+
+  .features {
+    width: var(--features-tablet-width);
+    height: auto;
+    padding: var(--padding);
+  }
+
+  .feature-left, .feature-center, .feature-right {
+    font-size: var(--tablet-font-size);
+  }
+
+  .swiper-slide {
+    position: relative;
+  }
+
+  .slide-text {
+    font-size: 26px; /* Smaller text size for tablet screens */
+  }
+
+}
+
+/* For screens 991px and above (Tablet and Desktop) */
+@media only screen and (min-width: 991px) {
+
+  /* Adjust Swiper Container */
+  .swiper {
+    width: 100%; /* Ensure swiper takes full width */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Prevent overflowing content */
+    position: relative; /* Ensure proper positioning */
+  }
+
+  /* Swiper Slide Adjustments */
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100%; /* Ensure slide takes full height */
+    max-height: 400px; /* Adjust max-height for consistency */
+  }
+
+  /* Ensure the slide image fits well */
+  .slide-image {
+    width: 100%; /* Make sure the image spans the full width */
+    height: 100%; /* Take full height of the slide */
+    object-fit: cover; /* Maintain aspect ratio while filling the slide */
+    max-height: 400px; /* Prevent image from stretching too much */
+  }
+
+  /* Swiper Buttons (Next and Previous) */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+  }
+}
+
+/* Large Desktop (above 1200px) */
+@media only screen and (min-width: 1200px) {
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    position: relative; /* Allow absolute positioning of text */
+    height: 100%; /* Ensure slide takes full height */
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the slide without stretching */
+  } 
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+}
+}
+
+/*media query for screens between 400px and 768px */
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    z-index: 15;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+}
+}
+
+/* Mobile styles swiper text */
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 20px; /* Smaller font size for mobile */
+    padding: 5px; /* Add padding for better readability */
+  }
+}
+
+/* Tablet styles swiper text */
+@media (min-width: 769px) and (max-width: 992px) {
+  .slide-text {
+    font-size: 22px; /* Adjust text size for tablet */
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 400px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Button color */
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    position: absolute; /* Position them absolute within swiper */
+    z-index: 10; /* Ensure buttons are on top of the images */
+    border-radius: 10px; /* Apply radius for larger screens */
+}
+}
+
+.footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 5vh; /* Use viewport height for responsiveness */
+    background-color: var(--white-bg-color); /* Background color */
+    color: #DB0D0D; /* Text color */
+    font-family: 'Aldrich', sans-serif; /* Font family */
+    font-size: 36px; /* Font size */
+    position: fixed; /* Fix the footer at the bottom */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    margin: 0; /* Remove any margin */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-radius: 8px; /* Add border radius for smoother appearance */
+}
+
+.footer-content {
+    text-align: center; /* Center text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        height: 8vh; /* Adjust height for smaller screens */
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        height: 6vh; /* Further adjust height for mobile */
+        font-size: 1.5rem; /* Further adjust font size for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+  body {
+      padding-bottom: 50px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+      padding-bottom: 40px; /* Adjust for mobile */
+  }
+}

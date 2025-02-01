@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medway Café</title>
+    <link rel="stylesheet" href="./mainstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <nav class="nav-container">
+          <a class="nav-item"
+            ><img class="logo" src="./assets/logo.png" /><img
+          /></a>
+          <h1 class="main-header">Medway Café</h1>
+          <a class="nav-item-desktop" href="#">Home</a>
+          <a class="nav-item-desktop" href="#">About US</a>
+          <a class="nav-item-desktop" href="#">Contact</a>
+          <a class="nav-item-desktop" href="#">Menu</a>
+          <a class="nav-item-desktop" href="#">Our Facebook Page </a>
+          <a  class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png" /></a>
+        </nav>
+      </nav>
+      <div id="overlay-mobile" class="overlay-mobile">
+        <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon" src="./assets/x-icon.png"/></a>
+        <a id="mobile-item1" href="#">Home</a>
+        <a id="mobile-item2" href="#">About US</a>
+        <a id="mobile-item3" href="#">Contact</a>
+        <a id="mobile-item4" href="#">Menu</a>
+        <a id="mobile-item5" href="#">Our Facebook Page </a>
+      </div>
+    </header>
+    <section class="hero-section">
+      <p class="mobile-hero-text">Right Address Of Coffee And Breakfast <3 </p>
+      <img class="hero-image" src="./assets/hero.png">
+      <div class="hero-text">Right Address Of Coffee And Breakfast <3 </div>
+    </section>
+    <section class="flow">
+      <img class="flow-icon" src="./assets/star.png">
+      <img class="flow-icon" src="./assets/star.png">
+      <img class="flow-icon" src="./assets/star.png">
+      <img class="flow-icon" src="./assets/star.png">
+      <img class="flow-icon" src="./assets/star.png">
+      <strong class="flow-text">All The Way With Hygiene</strong>
+    </section>
+    <section class="flow-text-mobile-container">
+      <strong class="flow-text-mobile">All The Way With Hygiene</strong>
+    </section>
+    <section class="flow-mobile">
+      <img class="flow-icon-mobile" src="./assets/star.png">
+      <img class="flow-icon-mobile" src="./assets/star.png">
+      <img class="flow-icon-mobile" src="./assets/star.png">
+      <img class="flow-icon-mobile" src="./assets/star.png">
+      <img class="flow-icon-mobile" src="./assets/star.png">
+    </section>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/breakfast.jpg" alt="A problem occurred Loading Imge..." class="slide-image">
+          <div class="slide-text"> Lovely Breakfasts <3 </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/lunch.jpg" alt="A problem occurred Loading Imge..." class="slide-image">
+          <div class="slide-text"> Quick Lunch And Snacks <3 </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/fresh.jpg " alt="A problem occurred Loading Imge..." class="slide-image">
+          <div class="slide-text"> Fresh And Healthy Meals <3 </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev" onclick="goToPrevSlide()"></div>
+      <div class="swiper-button-next" onclick="goToNextSlide()"></div>
+    </div>
+    <section class="features">
+      <div class="feature-left">Yummy Food</div>
+      <div class="feature-center">Lovely Staff</div>
+      <div class="feature-right">Friendly Place</div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+          <p>&copy; 2025 Medway Cafe. All Rights Reserved.</p>
+      </div>
+  </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
