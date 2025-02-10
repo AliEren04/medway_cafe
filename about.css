@@ -1,0 +1,303 @@
+:root {
+	--main-bg-color: #000000;
+	--white-bg-color: #ffffff;
+	--red-text-color: #db0d0d;
+	--box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--border-radius: 8px;
+	--max-width: 1678px;
+	--default-font-size: 36px;
+	--tablet-font-size: 24px;
+	--mobile-font-size: 14px;
+	--desktop-header-font-size: 32px;
+	--hero-text-font-size: 72px;
+	--main-header-font-size: 36px;
+	--hero-section-height: 342px;
+	--features-height: 90px;
+	--features-mobile-width: 90%;
+	--features-tablet-width: 85%;
+	--features-desktop-width: 70%;
+	--padding: 20px;
+	--mobile-padding: 15px;
+	--margin: 10px;
+	--nav-item-desktop-font-size: 26px;
+	--nav-item-tablet-font-size: 16px;
+	--nav-item-mobile-font-size: 10px;
+	--hero-text-tablet-font-size: 48px;
+	--hero-text-mobile-font-size: 20px;
+	--flow-icon-size: 182px;
+	--flow-icon-mobile-size: 72px;
+	--flow-text-font-size: 72px;
+	--flow-text-mobile-font-size: 22px;
+	--flow-text-mobile-font-size-small: 16px;
+	--main-header-margin-left: 28px;
+	--hero-section-margin-top: 128px;
+	--hero-section-margin-top-small: 172px;
+	--mobile-hero-text-margin-top: 72px;
+	--flow-mobile-margin-top: 16px;
+	--flow-text-mobile-container-margin-top: 48px;
+	--flow-text-mobile-container-margin-top-small: 64px;
+	--features-margin-top: 16px;
+}
+
+
+
+/* Fonts */
+@font-face {
+	font-family: "Bhavuka";
+	src: url("assets/fonts/Bhavuka-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* Overlay from right for mobile*/
+.overlay-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: auto;
+    right: -100%;
+    width: 184px;
+    height: 100vh;
+    background-color: var(--white-bg-color);
+    z-index: 20;
+    flex-direction: column;
+    color: #ad3030;
+    opacity: 0;
+    transition: right 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* When the menu is active (right to 0) */
+.overlay-mobile.overlay-mobile-active {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: right 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Hamburger icon alignment inside overlay */
+.mobile-menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 8px;
+    position: fixed;
+    visibility: visible;
+    top: 12px;
+    right: 0;
+    bottom: auto;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Mobile item alignment for overlay in mobile*/
+.mobile-item {
+    text-decoration: none !important;
+    color: inherit;
+    font-family: "Cherry Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    white-space: nowrap;
+    visibility: visible;
+}
+
+.mobile-item:hover {
+    color: #000000;
+}
+
+.x-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.main-header {
+    margin-left: var(--main-header-margin-left);
+
+}
+
+
+
+
+@media (min-width: 601px) {
+    .overlay-mobile {
+        display: none;
+    }
+    .nav-item-mobile {
+        display: none;
+    }
+    
+    .hamburger-container {
+        display: none;
+    }
+    
+    .nav-item-desktop {
+        text-decoration: none !important;
+        color: inherit;
+    }
+
+    .nav-container {
+
+    }
+    
+    .nav-item-desktop:hover {
+        color: #000000;
+    }
+
+    .nav-container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--white-bg-color);
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: "Cherry Swash", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #ad3030;
+        box-shadow: var(--box-shadow);
+        z-index: 100; /* Ensure it's on top */
+    }
+    
+    /* Logo sizing */
+    .logo {
+        max-width: 80px;
+        height: auto;
+    }
+
+    .main-header {
+        font-family: "Bhavuka", sans-serif;
+        font-size: var(--main-header-font-size);
+        color: #b34444;
+    }
+    
+    .main-header:hover {
+        color: #000000;
+    }
+    
+    
+    .footer {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 5vh; /* Use viewport height for responsiveness */
+        background-color: var(--white-bg-color); /* Background color */
+        color: #db0d0d; /* Text color */
+        font-family: "Aldrich", sans-serif; /* Font family */
+        font-size: 0.75rem; /* Font size */
+        position: fixed; /* Fix the footer at the bottom */
+        left: 0; /* Align to the left */
+        right: 0; /* Align to the right */
+        bottom: 0; /* Align to the bottom */
+        margin: 0; /* Remove any margin */
+        white-space: nowrap; /* Prevent text wrapping */
+        border-radius: 8px; /* Add border radius for smoother appearance */
+        z-index: 100; /* Ensure it's on top */
+    }
+    
+    .footer-content {
+        text-align: center; /* Center text */
+    }
+    
+}
+
+
+/* General Styles */
+body, html {
+    font-family: 'Cherry Swash', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f8f5f2;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* About Page Layout */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Two-Column Layout */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left & Right Columns */
+.about-text, .about-image {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Center Alignment for Left Column */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure Equal Height for Both Columns */
+@media (min-width: 768px) {
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch; /* Ensures equal height */
+        gap: 40px;
+    }
+    .about-text, .about-image {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto; /* Ensures no extra space below */
+    }
+}
+
+
+/* Media Query for Responsive Design */
+@media (max-width: 767px) {
+    .about-container {
+        flex-direction: column; /* Ensure stacking on mobile */
+        width: 100%;
+        padding: var(--mobile-padding);
+        gap: 20px; /* Add spacing */
+    }
+
+
+    .nav-item-desktop {
+      display: none;
+  }
+
+  .cafe-image{
+    width: 120px;
+    height : auto;
+  }
+
+  .logo{
+    width: 50px;
+    height : auto;
+  }
+  }

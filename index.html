@@ -22,6 +22,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
   </head>
   <body>
     <header>
@@ -31,25 +32,21 @@
             ><img class="logo" src="./assets/logo.png" /><img
           /></a>
           <h1 class="main-header">Medway Café</h1>
-          <a class="nav-item-desktop" href="#">Home</a>
-          <a class="nav-item-desktop" href="#">About US</a>
-          <a class="nav-item-desktop" href="#">Contact</a>
+          <a class="nav-item-desktop" href="./index.html">Home</a>
+          <a class="nav-item-desktop" href="./about.html">About US</a>
+          <a class="nav-item-desktop" href="./contact.html">Contact</a>
           <a class="nav-item-desktop" href="#">Menu</a>
           <a class="nav-item-desktop" href="#">Our Facebook Page </a>
-          <a class="nav-item-desktop" href="tel:01634450589"> &phone; 01634450589</a>
-          <a class="nav-item-desktop" href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9"><img class="map-icon" src="./assets/maps.png"/></a>
           <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png" /></a>
         </nav>
       </nav>
       <div id="overlay-mobile" class="overlay-mobile">
-        <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon" src="./assets/x-icon.png"/></a>
-        <a id="mobile-item1" href="#">Home</a>
-        <a id="mobile-item2" href="#">About US</a>
-        <a id="mobile-item3" href="#">Contact</a>
-        <a id="mobile-item4" href="#">Menu</a>
-        <a id="mobile-item5" href="#">Our Facebook Page </a>
-        <a id="mobile-item6" href="tel:01634450589" style="text-decoration: none; color: #ad3030;"> &phone; 01634450589</a>
-        <a id="mobile-item7" href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9"><img class="map-icon" src="./assets/maps.png"/></a>
+        <a id="mobile-menu"  href="javascript:void(0);" onclick="navHandler()"><img class="x-icon" src="./assets/x-icon.png"/></a>
+        <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
+        <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
+        <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
+        <a id="mobile-item4" class="item-mobile" href="#">Menu</a>
+        <a id="mobile-item5" class="item-mobile" href="#">Our Facebook Page </a>
       </div>
     </header>
     <section class="hero-section">
@@ -74,6 +71,22 @@
       <img class="flow-icon-mobile" src="./assets/star.png">
       <img class="flow-icon-mobile" src="./assets/star.png">
       <img class="flow-icon-mobile" src="./assets/star.png">
+    </section>
+    <section class="contact-info-desktop">
+      <div class="time-info">
+        <h3>MONDAY TO SATURDAY</h3>
+        <h3>FROM 7:00 AM TO 5:00 PM</h3>
+        <h3>SUNDAY</h3>
+        <h3>FRPM 9:00 AM TO 4:00 PM</h3>
+      </div>
+      <div class="phone-info">
+        <a href="tel:01634450589">01634450589</a>
+      </div>
+      <div class="map-info">
+        <a href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9" target="_blank">
+          <img src="./assets/maps.png" alt="Map Icon" class="desktop-iconk">
+        </a>
+      </div>
     </section>
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -103,6 +116,6 @@
           <p>&copy; 2025 Medway Café. All Rights Reserved.</p>
       </div>
   </footer>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>

@@ -1,14 +1,14 @@
 const navHandler = () => {
-    // Toggle visibility of the mobile menu and items
-    document.getElementById('overlay-mobile').classList.toggle('overlay-mobile-active');
-    document.getElementById('mobile-menu').classList.toggle('mobile-menu');
-    document.getElementById('mobile-item1').classList.toggle('mobile-item');
-    document.getElementById('mobile-item2').classList.toggle('mobile-item');
-    document.getElementById('mobile-item3').classList.toggle('mobile-item');
-    document.getElementById('mobile-item4').classList.toggle('mobile-item');
-    document.getElementById('mobile-item5').classList.toggle('mobile-item');
-  };
-  
+  const overlayMobile = document.getElementById('overlay-mobile');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileItems = document.querySelectorAll('.item-mobile');
+
+  overlayMobile.classList.toggle('overlay-mobile-active');
+  mobileMenu.classList.toggle('mobile-menu');
+  mobileItems.forEach((item) => {
+    item.classList.toggle('mobile-item');
+  });
+};
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal', // Ensure this is set to horizontal
     loop: true,
@@ -19,3 +19,18 @@ const navHandler = () => {
     pagination: false,
     scrollbar: false,
   });
+
+  const { animate, hover, press} = window.Motion; 
+
+  hover(".nav-item-desktop", (element) => {
+    animate(element, { scale: 1.3 }, { type: "spring" })
+
+    return () => animate(element, { scale: 1 }, { type: "spring" })
+})
+
+press(".item-mobile", (element) => {
+  animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
+
+  return () =>
+      animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
+})
