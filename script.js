@@ -10,7 +10,7 @@ const navHandler = () => {
   });
 };
   const swiper = new Swiper('.swiper', {
-    direction: 'horizontal', // Ensure this is set to horizontal
+    direction: 'horizontal', // Horizontal Swiper
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next', // Swiper will handle this

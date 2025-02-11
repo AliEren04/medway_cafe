@@ -23,6 +23,11 @@
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+<script>
+  window.addEventListener("pageshow", () => {
+  document.getElementById("contact-form").reset();
+});
+</script>
   </head>
   <body>
     <header>
@@ -36,7 +41,7 @@
           <a class="nav-item-desktop" href="./about.html">About US</a>
           <a class="nav-item-desktop" href="./contact.html">Contact</a>
           <a class="nav-item-desktop" href="#">Menu</a>
-          <a class="nav-item-desktop" href="#">Our Facebook Page </a>
+          <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
           <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png" /></a>
         </nav>
       </nav>
@@ -46,13 +51,14 @@
         <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
         <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
         <a id="mobile-item4" class="item-mobile" href="#">Menu</a>
-        <a id="mobile-item5" class="item-mobile" href="#">Our Facebook Page </a>
+        <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
       </div>
     </header>
     <section class="contact-section">
         <div class="contact-container">
             <h2>Contact Us</h2>
-            <form action="#" method="post">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="post" ">
+                <input type="hidden" name="access_key" value="46d14891-42aa-4c9c-95aa-edd73a898818">
                 <div class="input-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>

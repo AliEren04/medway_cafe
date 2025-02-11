@@ -135,11 +135,12 @@
     .nav-item-desktop {
         text-decoration: none !important;
         color: inherit;
+        font-size: var(--nav-item-desktop-font-size);
+        font-family: "Cherry Swash", serif;
+        font-weight: 400;
+        font-style: normal;
     }
 
-    .nav-container {
-
-    }
     
     .nav-item-desktop:hover {
         color: #000000;
@@ -301,3 +302,10 @@ body, html {
     height : auto;
   }
   }
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .nav-item-desktop {
+    font-size: var(--nav-item-tablet-font-size);
+  }
+    
+}
