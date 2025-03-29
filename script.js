@@ -28,7 +28,41 @@ const navHandler = () => {
     return () => animate(element, { scale: 1 }, { type: "spring" })
 })
 
+hover(".main-header", (element) => {
+  animate(element, { scale: 1.3 }, { type: "spring" })
+
+  return () => animate(element, { scale: 1 }, { type: "spring" })
+})
+
+hover(".nav-item", (element) => {
+  animate(element, { scale: 1.3 }, { type: "spring" })
+
+  return () => animate(element, { scale: 1 }, { type: "spring" })
+})
+
+hover(".phone-info", (element) => {
+  animate(element, { scale: 1.3 }, { type: "spring" })
+
+  return () => animate(element, { scale: 1 }, { type: "spring" })
+})
+
+
+
 press(".item-mobile", (element) => {
+  animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
+
+  return () =>
+      animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
+})
+
+press(".phone-info", (element) => {
+  animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
+
+  return () =>
+      animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
+})
+
+press(".desktop-iconk", (element) => {
   animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
 
   return () =>
