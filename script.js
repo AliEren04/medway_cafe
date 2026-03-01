@@ -9,62 +9,64 @@ const navHandler = () => {
     item.classList.toggle('mobile-item');
   });
 };
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal', // Horizontal Swiper
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next', // Swiper will handle this
-      prevEl: '.swiper-button-prev', // Swiper will handle this
-    },
-    pagination: false,
-    scrollbar: false,
-  });
 
-  const { animate, hover, press} = window.Motion; 
+const initSwiper = () => {
+  if (document.querySelector('.swiper')) {
+    new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: false,
+      scrollbar: false,
+    });
+  }
+};
 
-  hover(".nav-item-desktop", (element) => {
-    animate(element, { scale: 1.3 }, { type: "spring" })
+const initMotion = () => {
+  if (!window.Motion) return; // Motion.js not loaded
+  const { animate, hover, press } = window.Motion;
 
-    return () => animate(element, { scale: 1 }, { type: "spring" })
-})
+  const bindHover = (selector) => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => {
+      hover(el, () => animate(el, { scale: 1.3 }, { type: "spring" }), 
+                 () => animate(el, { scale: 1 }, { type: "spring" }));
+    });
+  };
 
-hover(".main-header", (element) => {
-  animate(element, { scale: 1.3 }, { type: "spring" })
+  const bindPress = (selector) => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => {
+      press(el, () => animate(el, { scale: 0.8 }, { type: "spring", stiffness: 1000 }),
+                 () => animate(el, { scale: 1 }, { type: "spring", stiffness: 500 }));
+    });
+  };
 
-  return () => animate(element, { scale: 1 }, { type: "spring" })
-})
+  // Desktop nav
+  bindHover(".nav-item-desktop");
+  bindHover(".main-header");
+  bindHover(".nav-item");
+  bindHover(".phone-info");
 
-hover(".nav-item", (element) => {
-  animate(element, { scale: 1.3 }, { type: "spring" })
+  // Press effects
+  bindPress(".item-mobile");
+  bindPress(".phone-info");
+  bindPress(".desktop-iconk");
+};
 
-  return () => animate(element, { scale: 1 }, { type: "spring" })
-})
+const updateFooterYear = () => {
+  const footerYearElement = document.getElementById('footer-year');
+  if (footerYearElement) {
+    footerYearElement.textContent = new Date().getFullYear();
+  }
+};
 
-hover(".phone-info", (element) => {
-  animate(element, { scale: 1.3 }, { type: "spring" })
-
-  return () => animate(element, { scale: 1 }, { type: "spring" })
-})
-
-
-
-press(".item-mobile", (element) => {
-  animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
-
-  return () =>
-      animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
-})
-
-press(".phone-info", (element) => {
-  animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
-
-  return () =>
-      animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
-})
-
-press(".desktop-iconk", (element) => {
-  animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
-
-  return () =>
-      animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
-})
+// Initialize all after DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  updateFooterYear();
+  initSwiper();
+  initMotion();
+});

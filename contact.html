@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medway Café - Contact Us</title>
-    <meta name="description" content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks.">
-    <link rel="stylesheet" href="./mainstyle.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-<script>
-  window.addEventListener("pageshow", () => {
-  document.getElementById("contact-form").reset();
-});
-</script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <nav class="nav-container">
-          <a class="nav-item"
-            ><img class="logo" src="./assets/logo.png" alt="logo" /><img
-          /></a>
-          <h1 class="main-header">Medway Café</h1>
-          <a class="nav-item-desktop" href="./index.html">Home</a>
-          <a class="nav-item-desktop" href="./about.html">About US</a>
-          <a class="nav-item-desktop" href="./contact.html">Contact</a>
-          <a class="nav-item-desktop" href="#">Menu</a>
-          <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
-          <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png" alt="mobile menu open icon" /></a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medway Café - Contact Us</title>
+  <meta name="description"
+    content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks.">
+  <link rel="stylesheet" href="./mainstyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"
+    integrity="sha384-HqXl5Kv1q5yIMSrAtLCCPxM9dwUK1BgfLuVs8ajNnJ4hcR/HCwtZ5ilcetz9I885"
+    crossorigin="anonymous"></script>
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+
+  <script>
+    window.addEventListener("pageshow", () => {
+      document.getElementById("contact-form").reset();
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <nav class="nav-container">
+        <a class="nav-item"><img class="logo" src="./assets/logo.png" alt="logo" /><img /></a>
+        <h1 class="main-header">Medway Café</h1>
+        <a class="nav-item-desktop" href="./index.html">Home</a>
+        <a class="nav-item-desktop" href="./about.html">About US</a>
+        <a class="nav-item-desktop" href="./contact.html">Contact</a>
+        <a class="nav-item-desktop" href="./assets/menu.pdf" target="_blank">Menu</a>
+        <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
+        <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png"
+            alt="mobile menu open icon" /></a>
       </nav>
-      <div id="overlay-mobile" class="overlay-mobile">
-        <a id="mobile-menu"  href="javascript:void(0);" onclick="navHandler()"><img class="x-icon" src="./assets/x-icon.png" alt="mobile menu close icon"/></a>
-        <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
-        <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
-        <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
-        <a id="mobile-item4" class="item-mobile" href="#">Menu</a>
-        <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
-      </div>
-    </header>
-    <section class="contact-section">
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="post" ">
-                <input type="hidden" name="access_key" value="46d14891-42aa-4c9c-95aa-edd73a898818">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+    </nav>
+    <div id="overlay-mobile" class="overlay-mobile">
+      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon"
+          src="./assets/x-icon.png" alt="mobile menu close icon" /></a>
+      <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
+      <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
+      <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
+      <a id="mobile-item4" class="item-mobile" href="./assets/menu.pdf" target="_blank">Menu</a>
+      <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook
+        Page </a>
+    </div>
+  </header>
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="post" ">
+        <input type="hidden" name="access_key" value="46d14891-42aa-4c9c-95aa-edd73a898818">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
         </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Medway Café. All Rights Reserved.</p>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
-    </footer>
-    <script type="application/ld+json">
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <div class="h-captcha" data-captcha="true"></div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        &copy; <span id="footer-year"></span> Medway Café. All Rights
+        Reserved.
+      </p>
+    </div>
+  </footer>
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "CafeOrCoffeeShop",
@@ -98,6 +103,9 @@
       "url": "https://www.medwaycafe.com"
     }
     </script>
-      <script src="script.js"></script>
+
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script src="script.js"></script>
 </body>
-</html>    
+
+</html>

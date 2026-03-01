@@ -351,6 +351,7 @@ body {
 	.map-info {
 		margin: 0 15px;
 	}
+	
 
 	/* Mobile styles swiper text */
 	.slide-text {
@@ -1129,6 +1130,7 @@ body {
 	text-align: center; /* Center text */
 }
 
+
 .contact-section {
     display: flex;
     justify-content: center;
@@ -1218,4 +1220,31 @@ body {
     .submit-btn {
         padding: 12px; /* Increase button padding for easier interaction */
     }
+}
+
+.footer-text{
+	text-decoration: none !important;
+	color: inherit;
+	font-family: "Cherry Swash", serif;
+}
+
+.time-text{
+    text-decoration: none !important;
+	color: inherit;
+	font-family: "Cherry Swash", serif;
+}
+
+
+.phone-text{
+    text-decoration: none !important;
+	font-family: "Cherry Swash", serif;
+}
+
+.feature-text{
+	text-decoration: none !important;
+	font-family: "Cherry Swash", serif;
+}
+
+.submit-btn{
+	margin: 4px;
 }

@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medway Café - Best Coffee & Breakfast in Medway</title>
-    <meta name="description" content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks.">
-    <link rel="stylesheet" href="./mainstyle.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <nav class="nav-container">
-          <a class="nav-item"
-            ><img class="logo" src="./assets/logo.png" alt="logo" /><img
-          /></a>
-          <h1 class="main-header">Medway Café</h1>
-          <a class="nav-item-desktop" href="./index.html">Home</a>
-          <a class="nav-item-desktop" href="./about.html">About US</a>
-          <a class="nav-item-desktop" href="./contact.html">Contact</a>
-          <a class="nav-item-desktop" href="#">Menu</a>
-          <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
-          <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png" alt="mobile menu open icon" /></a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medway Café - Best Coffee & Breakfast in Medway</title>
+  <meta name="description"
+    content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks.">
+  <link rel="stylesheet" href="./mainstyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"
+    integrity="sha384-HqXl5Kv1q5yIMSrAtLCCPxM9dwUK1BgfLuVs8ajNnJ4hcR/HCwtZ5ilcetz9I885"
+    crossorigin="anonymous"></script>
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <nav class="nav-container">
+        <a class="nav-item"><img class="logo" src="./assets/logo.png" alt="logo" /><img /></a>
+        <h1 class="main-header">Medway Café</h1>
+        <a class="nav-item-desktop" href="./index.html">Home</a>
+        <a class="nav-item-desktop" href="./about.html">About US</a>
+        <a class="nav-item-desktop" href="./contact.html">Contact</a>
+        <a class="nav-item-desktop" href="./assets/menu.pdf" target="_blank">Menu</a>
+        <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
+        <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png"
+            alt="mobile menu open icon" /></a>
       </nav>
-      <div id="overlay-mobile" class="overlay-mobile">
-        <a id="mobile-menu"  href="javascript:void(0);" onclick="navHandler()"><img class="x-icon" src="./assets/x-icon.png" alt="mobile menu close icon"/></a>
-        <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
-        <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
-        <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
-        <a id="mobile-item4" class="item-mobile" href="#">Menu</a>
-        <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB ">Our Facebook Page </a>
-      </div>
-    </header>
-    <section class="hero-section">
-      <p class="mobile-hero-text">Right Address Of Coffee And Breakfast <3 </p>
-      <img class="hero-image" src="./assets/hero.png" alt="hero image">
-      <div class="hero-text">Right Address Of Coffee And Breakfast <3 </div>
-    </section>
-    <section class="flow">
-      <img class="flow-icon" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon" src="./assets/star.png" alt="star icon">
-      <strong class="flow-text">All The Way With Hygiene</strong>
-    </section>
-    <section class="flow-text-mobile-container">
-      <strong class="flow-text-mobile">All The Way With Hygiene</strong>
-    </section>
-    <section class="flow-mobile">
-      <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-      <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-    </section>
-    <section class="contact-info-desktop">
-      <div class="time-info">
-        <h3>MONDAY TO SATURDAY</h3>
-        <h3>FROM 7:00 AM TO 5:00 PM</h3>
-        <h3>SUNDAY</h3>
-        <h3>FROM 9:00 AM TO 4:00 PM</h3>
-      </div>
-      <div class="phone-info">
-        <a href="tel:01634450589">01634 450 589</a>
-      </div>
-      <div class="map-info">
-        <a href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9" target="_blank">
-          <img src="./assets/maps.png" alt="Map Icon" class="desktop-iconk">
-        </a>
-      </div>
-    </section>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./assets/breakfast.webp" alt="Food Image For Slider" class="slide-image">
-          <div class="slide-text"> Lovely Breakfasts <3 </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/lunch.jpg" alt="Food Image For Slider" class="slide-image">
-          <div class="slide-text"> Quick Lunch And Snacks <3 </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/fresh.jpg " alt="Food Image For Slider" class="slide-image">
-          <div class="slide-text"> Fresh And Healthy Meals <3 </div>
-        </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    </nav>
+    <div id="overlay-mobile" class="overlay-mobile">
+      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon"
+          src="./assets/x-icon.png" alt="mobile menu close icon" /></a>
+      <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
+      <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
+      <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
+      <a id="mobile-item4" class="item-mobile" href="./assets/menu.pdf" target="_blank">Menu</a>
+      <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB ">Our Facebook
+        Page </a>
     </div>
-    <section class="features">
-      <div class="feature-left">Yummy Food</div>
-      <div class="feature-center">Lovely Staff</div>
-      <div class="feature-right">Friendly Place</div>
-    </section>
-    <footer class="footer">
-      <div class="footer-content">
-          <p>&copy; 2025 Medway Café. All Rights Reserved.</p>
+  </header>
+  <section class="hero-section">
+    <p class="mobile-hero-text">Right Address Of Coffee And Breakfast <3 </p>
+        <img class="hero-image" src="./assets/hero.png" alt="hero image">
+        <div class="hero-text">Right Address Of Coffee And Breakfast <3 </div>
+  </section>
+  <section class="flow">
+    <img class="flow-icon" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon" src="./assets/star.png" alt="star icon">
+    <strong class="flow-text">All The Way With Hygiene</strong>
+  </section>
+  <section class="flow-text-mobile-container">
+    <strong class="flow-text-mobile">All The Way With Hygiene</strong>
+  </section>
+  <section class="flow-mobile">
+    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
+  </section>
+  <section class="contact-info-desktop">
+    <div class="time-info">
+      <h3 class="time-text">MONDAY TO SATURDAY</h3>
+      <h3 class="time-text">FROM 7:00 AM TO 5:00 PM</h3>
+      <h3 class="time-text">SUNDAY</h3>
+      <h3 class="time-text">FROM 9:00 AM TO 4:00 PM</h3>
+    </div>
+    <div class="phone-info">
+      <a class="phone-text" href="tel:01634450589">01634 450 589</a>
+    </div>
+    <div class="map-info">
+      <a href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9" target="_blank">
+        <img src="./assets/maps.png" alt="Map Icon" class="desktop-iconk">
+      </a>
+    </div>
+  </section>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./assets/breakfast.webp" alt="Food Image For Slider" class="slide-image">
       </div>
+      <div class="swiper-slide">
+        <img src="./assets/lunch.jpg" alt="Food Image For Slider" class="slide-image">
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/fresh.jpg " alt="Food Image For Slider" class="slide-image">
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <section class="features">
+    <div class="feature-left feature-text">Yummy Food</div>
+    <div class="feature-center feature-text">Lovely Staff</div>
+    <div class="feature-right feature-text">Friendly Place</div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">&copy; <span id="footer-year"></span> Medway Café. All Rights Reserved.</p>
+    </div>
   </footer>
   <script src="script.js"></script>
   <script type="application/ld+json">
@@ -134,6 +135,7 @@
       "telephone": "01634450589",
       "url": "https://www.medwaycafe.com"
     }
-    </script>    
-  </body>
+    </script>
+</body>
+
 </html>

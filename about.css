@@ -309,3 +309,27 @@ body, html {
   }
     
 }
+
+
+.footer-text{
+	text-decoration: none !important;
+	color: inherit;
+	font-family: "Cherry Swash", serif;
+}
+
+.time-text{
+    text-decoration: none !important;
+	color: inherit;
+	font-family: "Cherry Swash", serif;
+}
+
+
+.phone-text{
+    text-decoration: none !important;
+	font-family: "Cherry Swash", serif;
+}
+
+.feature-text{
+	text-decoration: none !important;
+	font-family: "Cherry Swash", serif;
+}

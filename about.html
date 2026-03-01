@@ -1,68 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medway Café - About Us</title>
-    <meta name="description" content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks.">
-    <link rel="stylesheet" href="./about.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-  </head>
-  <body class="about-body">
-    <header>
-      <nav class="nav-container">
-        <a class="nav-item"><img class="logo" src="./assets/logo.png" alt="logo" /></a>
-        <h1 class="main-header">Medway Café</h1>
-        <a class="nav-item-desktop" href="./index.html">Home</a>
-        <a class="nav-item-desktop" href="./about.html">About Us</a>
-        <a class="nav-item-desktop" href="./contact.html">Contact</a>
-        <a class="nav-item-desktop" href="./menu.html">Menu</a>
-        <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page</a>
-        <a class="nav-item-mobile"  href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png" alt="mobile menu open icon" /></a>
-      </nav>
-      <div id="overlay-mobile" class="overlay-mobile">
-        <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon" src="./assets/x-icon.png " alt="mobile menu close icon"/></a>
-        <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
-        <a id="mobile-item2" class="item-mobile" href="./about.html">About Us</a>
-        <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
-        <a id="mobile-item4" class="item-mobile" href="./menu.html">Menu</a>
-        <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page</a>
-      </div>
-    </header>
-    
-    <main class="about-container">
-      <!-- Left Column - About Text -->
-      <div class="about-text">
-        <h2>Welcome to Medway Café! ☕</h2>
-        <p>At <strong>Medway Café</strong>, we believe that every cup of coffee tells a story. Nestled in the heart of the city, we bring you a warm and inviting space where friends, families, and coffee lovers come together to share special moments.</p>
-        <h3>Our Passion for Quality</h3>
-        <p>We are committed to serving <strong>freshly brewed coffee, handcrafted beverages, and delicious meals</strong> made with the finest ingredients. Our skilled baristas and chefs put their heart into every order, ensuring that you enjoy <strong>exceptional taste and quality</strong> in every sip and bite.</p>
-      </div>
 
-      <!-- Right Column - Image & Extra Content -->
-      <div class="about-image">
-        <img src="./assets/logo.png" alt="Medway Café Interior" class="cafe-image" alt="Branding for About Page"/>
-        <h3>A Cozy Place to Unwind</h3>
-        <p>Whether you're looking for a <strong>peaceful spot to work, a cozy corner for a friendly chat, or just a relaxing break</strong> from your day, Medway Café is your go-to destination.</p>
-        <h3>More Than Just a Café</h3>
-        <p>At Medway Café, we are more than just a coffee shop—we are a **family**. Every cup of coffee, every meal, and every smile comes straight from the heart. Our café is built on **warmth, tradition, and a passion for bringing people together**.</p> <p>We take pride in working with **local suppliers** and using fresh, high-quality ingredients, just like home-cooked meals. Our doors are always open for **friends, families, and neighbors** looking for a cozy place to relax, share stories, and create memories.</p> <p>Come visit us and experience the **genuine hospitality** that makes Medway Café feel like home. We can't wait to welcome you to the family! ❤️</p>
-        <p>Come visit us and be part of the <strong>Medway Café family</strong>. We can’t wait to serve you! ❤️</p>
-      </div>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medway Café - About Us</title>
+  <meta name="description"
+    content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks." />
+  <link rel="stylesheet" href="./about.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"
+    integrity="sha384-HqXl5Kv1q5yIMSrAtLCCPxM9dwUK1BgfLuVs8ajNnJ4hcR/HCwtZ5ilcetz9I885"
+    crossorigin="anonymous"></script>
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+</head>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; 2025 Medway Café. All Rights Reserved.</p>
-      </div>
-    </footer>
-    <script type="application/ld+json">
+<body class="about-body">
+  <header>
+    <nav class="nav-container">
+      <a class="nav-item"><img class="logo" src="./assets/logo.png" alt="logo" /></a>
+      <h1 class="main-header">Medway Café</h1>
+      <a class="nav-item-desktop" href="./index.html">Home</a>
+      <a class="nav-item-desktop" href="./about.html">About Us</a>
+      <a class="nav-item-desktop" href="./contact.html">Contact</a>
+      <a class="nav-item-desktop" href="./assets/menu.pdf" target="_blank">Menu</a>
+      <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page</a>
+      <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png"
+          alt="mobile menu open icon" /></a>
+    </nav>
+    <div id="overlay-mobile" class="overlay-mobile">
+      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon"
+          src="./assets/x-icon.png " alt="mobile menu close icon" /></a>
+      <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
+      <a id="mobile-item2" class="item-mobile" href="./about.html">About Us</a>
+      <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
+      <a id="mobile-item4" class="item-mobile" href="./assets/menu.pdf" target="_blank">Menu</a>
+      <a id="mobile-item5" class="item-mobile" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook
+        Page</a>
+    </div>
+  </header>
+
+  <main class="about-container">
+    <!-- Left Column - About Text -->
+    <div class="about-text">
+      <h2>Welcome to Medway Café! ☕</h2>
+      <p>
+        At <strong>Medway Café</strong>, we believe that every cup of coffee
+        tells a story. Nestled in the heart of the city, we bring you a warm
+        and inviting space where friends, families, and coffee lovers come
+        together ❤️ to share special moments.
+      </p>
+      <h3>Our Passion for Quality</h3>
+      <p>
+        We are committed to serving
+        <strong>freshly brewed coffee, handcrafted beverages, and delicious
+          meals</strong>
+        made with the finest ingredients. Our skilled baristas and chefs put
+        their heart into every order, ensuring that you enjoy
+        <strong>exceptional taste and quality</strong> in every sip and bite.
+      </p>
+    </div>
+
+    <!-- Right Column - Image & Extra Content -->
+    <div class="about-image">
+      <img src="./assets/logo.png" alt="Medway Café Interior" class="cafe-image" />
+      <h3>A Cozy Place to Unwind</h3>
+      <p>
+        Whether you're looking for a
+        <strong>peaceful spot to work, a cozy corner for a friendly chat, or just a
+          relaxing break</strong>
+        from your day, Medway Café is your go-to destination.
+      </p>
+      <h3>More Than Just a Café</h3>
+      <p>
+        At Medway Café, we are more than just a coffee shop—we are a family.
+        Every cup of coffee, every meal, and every smile comes straight from
+        the heart. Our café is built on warmth, tradition, and a passion for
+        bringing people together.
+      </p>
+      <p>
+        We take pride in working with local suppliers and using fresh,
+        high-quality ingredients, just like home-cooked meals. Our doors are
+        always open for friends, families, and neighbors looking for a cozy
+        place to relax, share stories, and create memories.
+      </p>
+      <p>
+        Come visit us and experience the genuine hospitality that makes Medway
+        Café feel like home. We can't wait to welcome you to the family!
+      </p>
+      <p>
+        Come visit us and be part of the <strong>Medway Café family</strong>.
+        We can’t wait to serve you!
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        &copy; <span id="footer-year"></span> Medway Café. All Rights
+        Reserved.
+      </p>
+    </div>
+  </footer>
+  <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "CafeOrCoffeeShop",
@@ -78,7 +124,8 @@
         "telephone": "01634450589",
         "url": "https://www.medwaycafe.com"
       }
-      </script>
-    <script src="./script.js"></script>
-  </body>
+    </script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
