@@ -33,20 +33,40 @@
   <header>
     <nav>
       <nav class="nav-container">
-        <a class="nav-item"><img class="logo" src="./assets/logo.png" alt="logo" /><img /></a>
+        <a class="nav-item">
+
+          <picture>
+            <source srcset="./assets/avif/logo.avif" type="image/avif">
+            <source srcset="./assets/webp/logo.webp" type="image/webp">
+            <img class="logo" src="./assets/jpeg/logo.jpg" alt="logo" width="800" height="800">
+          </picture>
+
+        </a>
         <h1 class="main-header">Medway Café</h1>
         <a class="nav-item-desktop" href="./index.html">Home</a>
         <a class="nav-item-desktop" href="./about.html">About US</a>
         <a class="nav-item-desktop" href="./contact.html">Contact</a>
         <a class="nav-item-desktop" href="./assets/menu.pdf" target="_blank">Menu</a>
         <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
-        <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png"
-            alt="mobile menu open icon" /></a>
+        <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()">
+          <picture>
+            <source srcset="./assets/avif/hamburger.avif" type="image/avif" />
+            <source srcset="./assets/webp/hamburger.webp" type="image/webp" />
+            <img src="./assets/jpeg/hamburger.jpg" alt="mobile menu open icon" loading="eager" decoding="async"
+              width="30" height="30" />
+          </picture>
+        </a>
       </nav>
     </nav>
     <div id="overlay-mobile" class="overlay-mobile">
-      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon"
-          src="./assets/x-icon.png" alt="mobile menu close icon" /></a>
+      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()">
+        <picture>
+          <source srcset="./assets/avif/x-icon.avif" type="image/avif" />
+          <source srcset="./assets/webp/x-icon.webp" type="image/webp" />
+          <img class="x-icon" src="./assets/jpeg/x-icon.jpg" alt="mobile menu close icon" loading="eager"
+            decoding="async" width="48" height="48" />
+        </picture>
+      </a>
       <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
       <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
       <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
@@ -57,26 +77,35 @@
   </header>
   <section class="hero-section">
     <p class="mobile-hero-text">Right Address Of Coffee And Breakfast <3 </p>
-        <img class="hero-image" src="./assets/hero.png" alt="hero image">
+
+        <picture>
+          <source srcset="./assets/avif/hero.avif" type="image/avif">
+          <source srcset="./assets/webp/hero.webp" type="image/webp">
+          <img class="hero-image" src="./assets/jpeg/hero.jpg" alt="Medway Café breakfast" fetchpriority="high"
+            width="760" height="180">
+        </picture>
+
         <div class="hero-text">Right Address Of Coffee And Breakfast <3 </div>
   </section>
   <section class="flow">
-    <img class="flow-icon" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
     <strong class="flow-text">All The Way With Hygiene</strong>
   </section>
+
   <section class="flow-text-mobile-container">
     <strong class="flow-text-mobile">All The Way With Hygiene</strong>
   </section>
+
   <section class="flow-mobile">
-    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
-    <img class="flow-icon-mobile" src="./assets/star.png" alt="star icon">
+    <img class="flow-icon-mobile" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon-mobile" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon-mobile" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon-mobile" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
+    <img class="flow-icon-mobile" src="./assets/webp/star.webp" alt="star icon" decoding="async" width="64" height="64">
   </section>
   <section class="contact-info-desktop">
     <div class="time-info">
@@ -89,21 +118,42 @@
       <a class="phone-text" href="tel:01634450589">01634 450 589</a>
     </div>
     <div class="map-info">
-      <a href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9" target="_blank">
-        <img src="./assets/maps.png" alt="Map Icon" class="desktop-iconk">
+      <a href="https://maps.app.goo.gl/AVq6dpS9itA3PbRA9" target="_blank" rel="noopener">
+        <picture>
+          <source srcset="./assets/avif/maps.avif" type="image/avif">
+          <source srcset="./assets/webp/maps.webp" type="image/webp">
+          <img src="./assets/jpeg/maps.jpg" alt="View Medway Café location on map" class="desktop-iconk" loading="lazy"
+            decoding="async" width="512" height="512">
+        </picture>
       </a>
     </div>
   </section>
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="./assets/breakfast.webp" alt="Food Image For Slider" class="slide-image">
+        <picture>
+          <source srcset="./assets/avif/breakfast.avif" type="image/avif">
+          <source srcset="./assets/webp/breakfast.webp" type="image/webp">
+          <img class="slide-image" src="./assets/jpeg/breakfast.jpg" alt="Medway Café breakfast" loading="lazy"
+            decoding="async" width="400" height="711">
+        </picture>
       </div>
       <div class="swiper-slide">
-        <img src="./assets/lunch.jpg" alt="Food Image For Slider" class="slide-image">
+        <picture>
+          <source srcset="./assets/avif/lunch.avif" type="image/avif">
+          <source srcset="./assets/webp/lunch.webp" type="image/webp">
+          <img class="slide-image" src="./assets/jpeg/lunch.jpg" alt="Medway Café lunch" loading="lazy" decoding="async"
+            width="400" height="252">
+        </picture>
       </div>
       <div class="swiper-slide">
-        <img src="./assets/fresh.jpg " alt="Food Image For Slider" class="slide-image">
+        <picture>
+          <source srcset="./assets/avif/fresh.avif" type="image/avif">
+          <source srcset="./assets/webp/fresh.webp" type="image/webp">
+          <img class="slide-image" src="./assets/jpeg/fresh.jpg" alt="Fresh food at Medway Café" loading="lazy"
+            decoding="async" width="400" height="246">
+        </picture>
+
       </div>
     </div>
     <div class="swiper-button-prev"></div>

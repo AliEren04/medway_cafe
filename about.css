@@ -120,19 +120,14 @@
 
 
 
+
 @media (min-width: 601px) {
-    .overlay-mobile {
-        display: none;
-    }
-    .nav-item-mobile {
-        display: none;
-    }
-    
-    .hamburger-container {
-        display: none;
-    }
-    
+    .overlay-mobile { display: none; }
+    .nav-item-mobile { display: none !important; } /* IMPORTANT FIX */
+    .hamburger-container { display: none; }
+
     .nav-item-desktop {
+        display: inline-block;
         text-decoration: none !important;
         color: inherit;
         font-size: var(--nav-item-desktop-font-size);
@@ -141,10 +136,7 @@
         font-style: normal;
     }
 
-    
-    .nav-item-desktop:hover {
-        color: #000000;
-    }
+    .nav-item-desktop:hover { color: #000000; }
 
     .nav-container {
         display: flex;
@@ -155,15 +147,11 @@
         background-color: var(--white-bg-color);
         justify-content: space-evenly;
         align-items: center;
-        font-family: "Cherry Swash", serif;
-        font-weight: 400;
-        font-style: normal;
         color: #ad3030;
         box-shadow: var(--box-shadow);
-        z-index: 100; /* Ensure it's on top */
+        z-index: 100;
     }
-    
-    /* Logo sizing */
+
     .logo {
         max-width: 80px;
         height: auto;
@@ -174,36 +162,10 @@
         font-size: var(--main-header-font-size);
         color: #b34444;
     }
-    
-    .main-header:hover {
-        color: #000000;
-    }
-    
-    
-    .footer {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        height: 5vh; /* Use viewport height for responsiveness */
-        background-color: var(--white-bg-color); /* Background color */
-        color: #db0d0d; /* Text color */
-        font-family: "Aldrich", sans-serif; /* Font family */
-        font-size: 0.75rem; /* Font size */
-        position: fixed; /* Fix the footer at the bottom */
-        left: 0; /* Align to the left */
-        right: 0; /* Align to the right */
-        bottom: 0; /* Align to the bottom */
-        margin: 0; /* Remove any margin */
-        white-space: nowrap; /* Prevent text wrapping */
-        border-radius: 8px; /* Add border radius for smoother appearance */
-        z-index: 100; /* Ensure it's on top */
-    }
-    
-    .footer-content {
-        text-align: center; /* Center text */
-    }
-    
+
+    .main-header:hover { color: #000000; }
 }
+
 
 
 /* General Styles */
@@ -258,6 +220,16 @@ body, html {
     justify-content: center;
     align-items: center;
 }
+
+
+.cafe-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;  /* adjust if needed */
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* Ensure Equal Height for Both Columns */
 @media (min-width: 768px) {
@@ -332,4 +304,15 @@ body, html {
 .feature-text{
 	text-decoration: none !important;
 	font-family: "Cherry Swash", serif;
+}
+
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .nav-item-desktop {
+        display: none !important;
+    }
+    .nav-item-mobile {
+        display: block !important;
+    }
 }

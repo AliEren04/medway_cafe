@@ -34,20 +34,40 @@
   <header>
     <nav>
       <nav class="nav-container">
-        <a class="nav-item"><img class="logo" src="./assets/logo.png" alt="logo" /><img /></a>
+        <a class="nav-item">
+
+          <picture>
+            <source srcset="./assets/avif/logo.avif" type="image/avif">
+            <source srcset="./assets/webp/logo.webp" type="image/webp">
+            <img class="logo" src="./assets/jpeg/logo.jpg" alt="logo" width="800" height="800">
+          </picture>
+
+        </a>
         <h1 class="main-header">Medway Café</h1>
         <a class="nav-item-desktop" href="./index.html">Home</a>
         <a class="nav-item-desktop" href="./about.html">About US</a>
         <a class="nav-item-desktop" href="./contact.html">Contact</a>
         <a class="nav-item-desktop" href="./assets/menu.pdf" target="_blank">Menu</a>
         <a class="nav-item-desktop" href="https://www.facebook.com/medwaycafe/?locale=en_GB">Our Facebook Page </a>
-        <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()"><img src="./assets/hamburger.png"
-            alt="mobile menu open icon" /></a>
+        <a class="nav-item-mobile" href="javascript:void(0);" onclick="navHandler()">
+          <picture>
+            <source srcset="./assets/avif/hamburger.avif" type="image/avif" />
+            <source srcset="./assets/webp/hamburger.webp" type="image/webp" />
+            <img src="./assets/jpeg/hamburger.jpg" alt="mobile menu open icon" loading="eager" decoding="async"
+              width="30" height="30" />
+          </picture>
+        </a>
       </nav>
     </nav>
     <div id="overlay-mobile" class="overlay-mobile">
-      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()"><img class="x-icon"
-          src="./assets/x-icon.png" alt="mobile menu close icon" /></a>
+      <a id="mobile-menu" href="javascript:void(0);" onclick="navHandler()">
+        <picture>
+          <source srcset="./assets/avif/x-icon.avif" type="image/avif" />
+          <source srcset="./assets/webp/x-icon.webp" type="image/webp" />
+          <img class="x-icon" src="./assets/jpeg/x-icon.jpg" alt="mobile menu close icon" loading="eager"
+            decoding="async" width="48" height="48" />
+        </picture>
+      </a>
       <a id="mobile-item1" class="item-mobile" href="./index.html">Home</a>
       <a id="mobile-item2" class="item-mobile" href="./about.html">About US</a>
       <a id="mobile-item3" class="item-mobile" href="./contact.html">Contact</a>
