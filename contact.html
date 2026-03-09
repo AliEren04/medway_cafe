@@ -7,19 +7,15 @@
   <title>Medway Café - Contact Us</title>
   <meta name="description"
     content="Lovely Coffee & Breakfast in Medway. Visit us for the best coffee, delicious and price-wise best breakfast, delicious flexible priced food and drinks.">
-  <link rel="stylesheet" href="./mainstyle.css" />
+  <link rel="preload" href="./mainstyle.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="./mainstyle.css">
+  </noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"
-    integrity="sha384-HqXl5Kv1q5yIMSrAtLCCPxM9dwUK1BgfLuVs8ajNnJ4hcR/HCwtZ5ilcetz9I885"
-    crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Carattere&family=Codystar:wght@300;400&display=swap"
+    rel="stylesheet">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
   <link rel="icon" type="image/png" href="./assets/icon/favicon-96x96.png" sizes="96x96" />
@@ -128,9 +124,16 @@
       "url": "https://www.medway-cafe.co.uk"
     }
     </script>
-
   <script src="https://web3forms.com/client/script.js" async defer></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+  <script>
+    window.addEventListener('load', () => {
+      // Load Motion JS
+      import('https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js').then(() => {
+        initMotion(); 
+      });
+    });
+  </script>
 </body>
 
 </html>
